@@ -5,6 +5,7 @@ import { GlobalStyle } from './global-style';
 
 import Header from "./components/Header";
 import Routes from "./Routes";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <GlobalStyle/>
         <Header/>
         <Routes/>
+        <Footer/>
       </div>
     </Router>
   );

@@ -20,7 +20,8 @@ import {
   AboutButton,
   BasketStyled,
   BasketInstStyled,
-  BasketButtonStyled
+  BasketButtonStyled,
+  ImageStyled
 } from "./header.styled";
 import Menu from "./Menu";
 
@@ -45,9 +46,8 @@ return(
         <AboutTimeStyled>Доставка с 08:00 до 24:00</AboutTimeStyled>
         <AboutContacts>
           {image.map((image, key) => (
-            <img
+            <ImageStyled
               key={key}
-              style={{width: '14px', height: '14px', margin: '2px'}}
               src={image}
               alt=''/>
           ))}

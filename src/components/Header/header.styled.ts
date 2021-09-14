@@ -40,7 +40,6 @@ export const AboutContacts = styled.div`
  align-items: center;
  width: 140px;
  cursor: pointer;
-
 `
 
 export const AboutTimeStyled = styled.div`
@@ -97,4 +96,10 @@ export const BasketButtonStyled = styled.div`
  line-height: 18px;
  text-align: center;
  cursor: pointer;
+`
+
+export const ImageStyled = styled.img`
+ width: 14px;
+ height: 14px;
+ margin: 2px;
 `
