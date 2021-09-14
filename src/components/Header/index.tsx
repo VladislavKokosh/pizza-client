@@ -1,4 +1,6 @@
 import React, { FC } from 'react'
+import { useHistory } from 'react-router-dom'
+
 import {
   TELEGRAM_MENU,
   TITLE_MENU,
@@ -20,8 +22,10 @@ import {
   BasketInstStyled,
   BasketButtonStyled
 } from "./header.styled";
+import Menu from "./Menu";
 
 const Header : FC = () => {
+  const history = useHistory()
   const image = [TELEGRAM_MENU, VIBER_MENU, WHATSAPP_MENU]
 
 return(
@@ -29,6 +33,7 @@ return(
     <TitleStyled>
       <LogoStyled>
         <img
+          onClick={() => history.push('/')}
           src={TITLE_MENU}
           alt=''
         />
@@ -68,6 +73,7 @@ return(
         </BasketButtonStyled>
       </BasketStyled>
     </TitleStyled>
+    <Menu/>
   </div>
 )}
 

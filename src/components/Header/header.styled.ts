@@ -4,7 +4,7 @@ export const TitleStyled = styled.div`
  display: flex;
  justify-content: space-between;
  height: 102px;
- padding: 0 20px 10px 20px;
+ padding: 6px 20px 10px 20px;
  border-bottom: 1px solid #EEEEEE;
 `
 
