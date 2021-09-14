@@ -8,7 +8,7 @@ import {
   WHATSAPP_MENU,
   INST_MENU,
   SHOPPING_BASKET
-} from "../../styles/image";
+} from "../../styles/image/index";
 
 import {
   TitleStyled,
