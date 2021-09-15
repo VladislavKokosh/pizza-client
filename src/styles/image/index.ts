@@ -10,6 +10,7 @@ import vk_white from './vk-white.png'
 import whatsapp_white from './whatsapp-white.png'
 import inst_white from './inst-white.png'
 import logo_footer from './logo-footer.png'
+import carousel from './carousel.png'
 
 export const TITLE_MENU = title_menu;
 export const TELEGRAM_MENU = telegram_menu;
@@ -23,3 +24,4 @@ export const WHATSAPP_WHITE = whatsapp_white;
 export const VK_WHITE = vk_white;
 export const INST_WHITE = inst_white;
 export const LOGO_FOOTER = logo_footer;
+export const CAROUSEL = carousel;

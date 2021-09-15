@@ -9,12 +9,12 @@ const Footer:FC = () => {
   const imageOne = [TELEGRAM_WHITE, VIBER_WHITE, WHATSAPP_WHITE]
   const imageTwo = [VIBER_WHITE, TELEGRAM_WHITE, INST_WHITE, WHATSAPP_WHITE, VK_WHITE]
 
-  const hasMenuItem = items.map(item => (
-    <FooterMenuItemStyled>{item.title}</FooterMenuItemStyled>
+  const hasMenuItem = items.map((item,key) => (
+    <FooterMenuItemStyled key={key}>{item.title}</FooterMenuItemStyled>
   ))
 
-  const hasInfoItem = itemsInfo.map(item => (
-    <FooterMenuItemStyled>{item.title}</FooterMenuItemStyled>
+  const hasInfoItem = itemsInfo.map((item, key) => (
+    <FooterMenuItemStyled key={key}>{item.title}</FooterMenuItemStyled>
   ))
 
   return(
