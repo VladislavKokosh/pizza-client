@@ -1,6 +1,8 @@
 import React, { FC } from 'react'
 import { Route, Switch, Redirect } from "react-router-dom";
 import HomePage from "../Pages/HomePage";
+import StockPage from "../Pages/StockPage";
+import StockDescription from "../components/Stock/StockDescription";
 
 const Routes:FC = () => {
   return(
@@ -20,7 +22,8 @@ const Routes:FC = () => {
       <Route exact path='/drink' component={HomePage}/>
       <Route exact path='/desserts' component={HomePage}/>
       <Route exact path='/sauces' component={HomePage}/>
-      <Route exact path='/stock' component={HomePage}/>
+      <Route exact path='/stock' component={StockPage}/>
+        <Route path='/stock/:link' component={StockDescription}/>
       <Route exact path='/delivery' component={HomePage}/>
       <Redirect to='/'/>
     </Switch>
