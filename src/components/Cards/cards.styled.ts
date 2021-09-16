@@ -8,3 +8,9 @@ export const CardsStyled = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
 `
+export const LoaderStyled = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
