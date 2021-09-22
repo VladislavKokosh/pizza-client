@@ -1,4 +1,3 @@
-import React, { FC } from 'react'
 import { useHistory } from 'react-router-dom'
 
 import {
@@ -9,6 +8,8 @@ import {
   INST_MENU,
   SHOPPING_BASKET
 } from "../../styles/image/index";
+
+import { Menu } from "./Menu";
 
 import {
   TitleStyled,
@@ -23,9 +24,8 @@ import {
   BasketButtonStyled,
   ImageStyled
 } from "./header.styled";
-import Menu from "./Menu";
 
-const Header : FC = () => {
+const Header = () => {
   const history = useHistory()
   const image = [TELEGRAM_MENU, VIBER_MENU, WHATSAPP_MENU]
 
@@ -77,4 +77,4 @@ return(
   </div>
 )}
 
-export default Header
+export  { Header }

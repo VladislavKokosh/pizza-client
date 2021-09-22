@@ -1,13 +1,9 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { useHistory, useLocation } from 'react-router-dom'
-import {MenuItemStyled, MenuItemActiveStyled} from "./menu-item.styled";
+import {MenuItemStyled, MenuItemActiveStyled} from "./menuitem.styled";
+import { IMenuItemProps } from './menuitem.types';
 
-interface IProps {
-  title: string,
-  link: string
-}
-
-const MenuItem:FC<IProps> = ({title, link}) => {
+const MenuItem:FC<IMenuItemProps> = ({title, link}) => {
   const history = useHistory()
   const { pathname } = useLocation()
 
@@ -28,4 +24,4 @@ const MenuItem:FC<IProps> = ({title, link}) => {
     )
 }
 
-export default MenuItem
+export { MenuItem }

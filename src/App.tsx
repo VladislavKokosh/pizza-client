@@ -3,10 +3,8 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 import { AppStyled } from "./app.styled";
 import { GlobalStyle } from './global-style';
-
-import Header from "./components/Header";
 import Routes from "./Routes";
-import { Footer } from "./components";
+import { Header, Footer } from "./components";
 import Loader from "./components/Loader";
 
 
