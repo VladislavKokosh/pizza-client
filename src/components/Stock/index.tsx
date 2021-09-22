@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import {StockStyled,StockTitleStyled} from "./stock.styled";
 import {items} from "./items";
-import StockCard from "./StockCard";
+import StockCard from "./StockCard/stockcard";
 
 
 const Stock:FC = () => {
@@ -18,4 +18,4 @@ const Stock:FC = () => {
   )
 }
 
-export default Stock
+export { Stock }
