@@ -6,7 +6,7 @@ import { GlobalStyle } from './global-style';
 
 import Header from "./components/Header";
 import Routes from "./Routes";
-import Footer from "./components/Footer";
+import { Footer } from "./components";
 import Loader from "./components/Loader";
 
 

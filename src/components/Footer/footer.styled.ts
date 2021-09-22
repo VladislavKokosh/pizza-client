@@ -64,3 +64,21 @@ export const FooterButtonStyled = styled.div`
   cursor: pointer;
   margin-top: 6px;
 `
+
+export const FooterLogoStyled = styled.img`
+  width: 154px;
+  height: 101px;
+  paddingTop: 40px;
+`
+
+export const FooterContactsImageStyled = styled.img`
+  width: 14px;
+  height: 14px;
+  margin: 2px;
+`
+
+export const FooterContactsImageTwoStyled = styled.img`
+  width: 20px;
+  height: 20px;
+  margin: 2px;
+`
