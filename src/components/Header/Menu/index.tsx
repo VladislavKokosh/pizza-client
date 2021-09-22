@@ -1,14 +1,22 @@
-import React, { FC } from 'react'
+import React, {FC, useEffect} from 'react'
 import {MenuStyled} from "./menu.styled";
+import {useDispatch, useSelector} from "react-redux";
 
-import { items } from './items'
 import MenuItem from "./MenuItem";
+import {getCategorySelector} from "../../../store/selectors/category";
+import {getCategoryAsync} from "../../../store/actions/category";
 
 const Menu : FC = () => {
+  const dispatch = useDispatch()
+  const menuItems = useSelector(getCategorySelector)
+  useEffect(() => {
+    dispatch(getCategoryAsync())
+  }, [])
+
   return(
     <MenuStyled>
-      {items.map((item, key) => (
-        <MenuItem title={item.title} link={item.link} key={key}/>
+      {menuItems.map((item) => (
+        <MenuItem title={item.title} link={item.id} key={item.id}/>
       ))}
     </MenuStyled>
   )

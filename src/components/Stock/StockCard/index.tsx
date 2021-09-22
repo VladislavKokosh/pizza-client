@@ -9,7 +9,7 @@ const StockCard:FC<IStockCard> = ({title, image, description, link}) => {
       <img src={image} style={{borderRadius:'12px', width: '210px', height:'160px'}}/>
       <StockCardTitleStyled>{title}</StockCardTitleStyled>
       <StockCardButtonStyled>
-        <Link to={`/stock/${link}`}>Подробнее</Link>
+        <Link style={{color: 'white'}} to={`/stock/${link}`}>Подробнее</Link>
       </StockCardButtonStyled>
     </StockCardStyled>
   )

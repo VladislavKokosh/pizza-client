@@ -10,7 +10,7 @@ const HomePage: FC = () => {
       <Cards></Cards>
       <div style={{textAlign:'center'}}>
         <h1>Зона доставки</h1>
-        <MyMap></MyMap>
+        <MyMap/>
       </div>
     </div>
   )

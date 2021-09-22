@@ -8,21 +8,21 @@ const Routes:FC = () => {
   return(
     <Switch>
       <Route exact path='/' component={HomePage}/>
-      <Route exact path='/sets' component={HomePage}/>
-      <Route exact path='/sushi' component={HomePage}/>
-      <Route exact path='/rolls' component={HomePage}/>
-      <Route exact path='/sashimi' component={HomePage}/>
-      <Route exact path='/pizza' component={HomePage}/>
-      <Route exact path='/combo' component={HomePage}/>
-      <Route exact path='/shaurma' component={HomePage}/>
-      <Route exact path='/frying' component={HomePage}/>
-      <Route exact path='/grill' component={HomePage}/>
-      <Route exact path='/pancakes' component={HomePage}/>
-      <Route exact path='/sandwiches' component={HomePage}/>
-      <Route exact path='/drink' component={HomePage}/>
-      <Route exact path='/desserts' component={HomePage}/>
-      <Route exact path='/sauces' component={HomePage}/>
-      <Route exact path='/stock' component={StockPage}/>
+      <Route path='/sets' component={HomePage}/>
+      <Route path='/sushi' component={HomePage}/>
+      <Route path='/rolls' component={HomePage}/>
+      <Route path='/sashimi' component={HomePage}/>
+      <Route path='/pizza' component={HomePage}/>
+      <Route path='/combo' component={HomePage}/>
+      <Route path='/shaurma' component={HomePage}/>
+      <Route path='/frying' component={HomePage}/>
+      <Route path='/grill' component={HomePage}/>
+      <Route path='/pancakes' component={HomePage}/>
+      <Route path='/sandwiches' component={HomePage}/>
+      <Route path='/drink' component={HomePage}/>
+      <Route path='/desserts' component={HomePage}/>
+      <Route path='/sauces' component={HomePage}/>
+      <Route path='/:link' component={StockPage}/>
         <Route path='/stock/:link' component={StockDescription}/>
       <Route exact path='/delivery' component={HomePage}/>
       <Redirect to='/'/>
