@@ -36,3 +36,9 @@ export const StockCardButtonStyled = styled.div`
   border-radius: 12px;
   margin: 130px 20px 0 0;
 `
+
+export const StockImageStyled = styled.img`
+  borderRadius: 12px;
+  width: 210px;
+  height:'160px;
+`

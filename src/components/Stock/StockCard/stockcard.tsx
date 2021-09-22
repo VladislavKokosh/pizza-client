@@ -1,7 +1,9 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import {Link} from "react-router-dom";
-import { IStockCard} from "./IStockCard";
-import { StockCardStyled, StockCardTitleStyled, StockCardButtonStyled } from "./stock-card.styled";
+
+import { IStockCard} from "./stockcard.types";
+
+import { StockCardStyled, StockCardTitleStyled, StockCardButtonStyled } from "./stockcard.styled";
 
 const StockCard:FC<IStockCard> = ({title, image, description, link}) => {
   return(
