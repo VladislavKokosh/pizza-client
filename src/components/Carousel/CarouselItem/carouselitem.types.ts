@@ -1,3 +1,4 @@
 export interface ICarouselIemProps {
-  content: any
+  id: string,
+  image: string
 }

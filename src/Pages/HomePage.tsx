@@ -1,9 +1,8 @@
-import React, { FC } from 'react'
-import Carousel from "../components/Carousel";
+import { Cards, Carousel } from "../components";
 import MyMap from "../components/Map";
-import { Cards } from "../components";
 
-const HomePage: FC = () => {
+
+const HomePage = () => {
   return (
     <div style={{minHeight: '100vh'}}>
       <Carousel></Carousel>
