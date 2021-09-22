@@ -1,6 +1,4 @@
-import { Cards, Carousel } from "../components";
-import MyMap from "../components/Map";
-
+import { Cards, Carousel, MyMap } from "../components";
 
 const HomePage = () => {
   return (

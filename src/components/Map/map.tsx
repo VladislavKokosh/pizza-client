@@ -1,7 +1,10 @@
-import React, { FC } from 'react'
-import { YMaps, Map, Polygon } from 'react-yandex-maps';
+import {
+  YMaps,
+  Map,
+  Polygon
+} from 'react-yandex-maps';
 
-const MyMap : FC = () => {
+const MyMap = () => {
   return(
     <YMaps>
       <Map
@@ -44,4 +47,4 @@ const MyMap : FC = () => {
   )
 }
 
-export default  MyMap
+export { MyMap }
