@@ -6,7 +6,7 @@ import { getCategoryAsync } from "../../store/actions/category";
 import { getLoaderSelector } from "../../store/selectors/loader";
 
 import { Card } from "./Card";
-import Loader from "../Loader";
+import { Loader } from "../Loader";
 
 import { CardsStyled, LoaderStyled } from "./cards.styled";
 
