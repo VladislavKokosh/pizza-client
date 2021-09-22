@@ -1,10 +1,12 @@
 import React, { FC } from 'react'
 import { Route, Switch, Redirect } from "react-router-dom";
-import HomePage from "../Pages/HomePage";
 import StockPage from "../Pages/StockPage";
 import StockDescription from "../components/Stock/StockDescription";
 
 const Routes:FC = () => {
+
+  const HomePage = React.lazy(() => import('../Pages/HomePage'))
+
   return(
     <Switch>
       <Route exact path='/' component={HomePage}/>

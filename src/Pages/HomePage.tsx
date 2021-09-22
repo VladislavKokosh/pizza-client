@@ -1,11 +1,11 @@
 import React, { FC } from 'react'
 import Carousel from "../components/Carousel";
 import MyMap from "../components/Map";
-import Cards from "../components/Cards";
+import { Cards } from "../components";
 
 const HomePage: FC = () => {
   return (
-    <div>
+    <div style={{minHeight: '100vh'}}>
       <Carousel></Carousel>
       <Cards></Cards>
       <div style={{textAlign:'center'}}>

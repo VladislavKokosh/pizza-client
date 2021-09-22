@@ -25,3 +25,7 @@ export const CardDescriptionStyled = styled.div`
   line-height: 17px;
   color: #202020;
 `
+
+export const CardImageStyled = styled.img`
+  borderRadius:'30px'
+`
