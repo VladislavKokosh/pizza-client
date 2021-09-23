@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CardStyled = styled.div`
-  padding: 10px 15px 10px 15px;
+  padding: 10px 0 10px 0;
 `
 
 export const CardTitleStyled = styled.div`
@@ -27,5 +27,5 @@ export const CardDescriptionStyled = styled.div`
 `
 
 export const CardImageStyled = styled.img`
-  borderRadius:'30px'
+  border-radius: 30px;
 `

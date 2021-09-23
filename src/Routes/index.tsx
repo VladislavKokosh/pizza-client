@@ -22,8 +22,8 @@ const Routes = () => {
       <Route path='/drink' component={HomePage}/>
       <Route path='/desserts' component={HomePage}/>
       <Route path='/sauces' component={HomePage}/>
-      <Route path='/:link' component={StockPage}/>
-        <Route path='/stock/:link' component={StockDescription}/>
+      <Route exact path='/:link' component={StockPage}/>
+        <Route path='/stock/:id' component={StockDescription}/>
       <Route exact path='/delivery' component={HomePage}/>
       <Redirect to='/'/>
     </Switch>

@@ -1,15 +1,22 @@
-import React, { FC } from "react";
+import React, {FC, useEffect} from "react";
 import { useParams } from 'react-router-dom';
 
 import {StockDescriptionStyled} from "./stock-description.styled";
-import { items } from '../items'
+import {useDispatch} from "react-redux";
+import {getSaleByIdAsync} from "../../../store/actions/sale";
+import {SaleByIdPayload} from "../../../store/types/sale";
 
 const StockDescription:FC = () => {
-  const param : string  = useParams()
-  let stock: any = items.find(item => item.link === param)
+  const dispatch = useDispatch()
+  const { id } = useParams<{id: string}>()
+  useEffect(()=>{
+    console.log(id)
+    dispatch(getSaleByIdAsync(id))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[])
   return(
     <StockDescriptionStyled>
-      {stock}
+
     </StockDescriptionStyled>
   )
 }

@@ -3,15 +3,15 @@ import styled from "styled-components";
 export const StockCardStyled = styled.div`
   margin: 20px;
   display: flex;
-  width: 628px;
-  height: 191px;
+  width: 560px;
+  height: 160px;
   background: #FFFFFF;
   border-radius: 12px;
 `
 
 export const StockCardTitleStyled = styled.div`
   cursor: default;
-  padding-left: 20px;
+  padding: 20px 0 0 20px;
   wfont-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -34,11 +34,11 @@ export const StockCardButtonStyled = styled.div`
   height: 36px;
   background: #FF3737;
   border-radius: 12px;
-  margin: 130px 20px 0 0;
+  margin: 100px 20px 0 0;
 `
 
 export const StockImageStyled = styled.img`
-  borderRadius: 12px;
+  border-radius: 12px 0 0 12px;
   width: 210px;
-  height:'160px;
+  height: 160px;
 `
