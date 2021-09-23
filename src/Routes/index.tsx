@@ -1,8 +1,8 @@
 import { Route, Switch, Redirect } from "react-router-dom";
 
-import { HomePage, StockPage } from '../Pages';
+import { HomePage, SalesPage } from '../Pages';
 
-import StockDescription from "../components/Stock/StockDescription";
+import { StockDescription } from "../components/Sales/SaleDescription";
 
 const Routes = () => {
   return(
@@ -22,7 +22,7 @@ const Routes = () => {
       <Route path='/drink' component={HomePage}/>
       <Route path='/desserts' component={HomePage}/>
       <Route path='/sauces' component={HomePage}/>
-      <Route exact path='/:link' component={StockPage}/>
+      <Route exact path='/:link' component={SalesPage}/>
         <Route path='/stock/:id' component={StockDescription}/>
       <Route exact path='/delivery' component={HomePage}/>
       <Redirect to='/'/>

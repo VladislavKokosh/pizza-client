@@ -1,15 +1,18 @@
-import React, {FC, useEffect} from 'react'
-import {StockStyled,StockTitleStyled} from "./stock.styled";
-import StockCard from "./StockCard/stockcard";
-import {useDispatch, useSelector} from "react-redux";
-import {getSaleSelector} from "../../store/selectors/sale";
-import {getSaleAsync} from "../../store/actions/sale";
-import {LoaderStyled} from "../Cards/cards.styled";
-import {Loader} from "../Loader";
-import {getLoaderSelector} from "../../store/selectors/loader";
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from "react-redux";
+
+import { getLoaderSelector } from "../../store/selectors/loader";
+import { getSaleSelector } from "../../store/selectors/sale";
+import { getSaleAsync } from "../../store/actions/sale";
+
+import { SaleCard } from "./SaleCard";
+import { Loader } from "../Loader";
+
+import { SaleStyled,SaleTitleStyled } from "./stock.styled";
+import { LoaderStyled } from "../Cards/cards.styled";
 
 
-const Stock:FC = () => {
+const Sales = () => {
   const dispatch = useDispatch()
   const sales = useSelector(getSaleSelector)
   const isLoading = useSelector(getLoaderSelector)
@@ -26,7 +29,7 @@ const Stock:FC = () => {
   )
 
   const hasSales = !isLoading && !!sales.length && sales.map((sale)=> (
-    <StockCard
+    <SaleCard
       key={sale.id}
       id={sale.id}
       title={sale.title}
@@ -40,15 +43,15 @@ const Stock:FC = () => {
 
   return(
     <>
-      <StockTitleStyled>Акции</StockTitleStyled>
-      <StockStyled>
+      <SaleTitleStyled>Акции</SaleTitleStyled>
+      <SaleStyled>
         {hasLoading}
         {hasSales}
         {hasEmpty}
-      </StockStyled>
+      </SaleStyled>
     </>
 
   )
 }
 
-export { Stock }
+export { Sales }

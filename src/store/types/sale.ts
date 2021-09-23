@@ -38,9 +38,6 @@ export type GetSaleFailure = {
   payload: SaleFailurePayload
 }
 
-export interface SaleByIdPayload {
-  id: string
-}
 export interface SaleByIdSuccessPayload {
   saleById: ISale
 }

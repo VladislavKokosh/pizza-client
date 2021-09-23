@@ -1,4 +1,4 @@
-export interface IStockCard {
+export interface ISaleCard {
   id: string,
   title: string,
   link: string,

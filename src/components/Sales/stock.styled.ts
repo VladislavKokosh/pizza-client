@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StockStyled = styled.div`
+export const SaleStyled = styled.div`
   padding: 20px;
   background: #F5F5F7;
   display: flex;
@@ -8,7 +8,7 @@ export const StockStyled = styled.div`
   flex-wrap: wrap;
 `
 
-export const StockTitleStyled = styled.div`
+export const SaleTitleStyled = styled.div`
   padding: 20px;
   font-style: normal;
   font-weight: 500;

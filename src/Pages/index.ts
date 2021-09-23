@@ -1,2 +1,2 @@
 export * from './HomePage'
-export * from './StockPage'
+export * from './SalePage'

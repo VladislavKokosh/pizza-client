@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StockCardStyled = styled.div`
+export const SaleCardStyled = styled.div`
   margin: 20px;
   display: flex;
   width: 560px;
@@ -9,7 +9,7 @@ export const StockCardStyled = styled.div`
   border-radius: 12px;
 `
 
-export const StockCardTitleStyled = styled.div`
+export const SaleCardTitleStyled = styled.div`
   cursor: default;
   padding: 20px 0 0 20px;
   wfont-style: normal;
@@ -19,7 +19,7 @@ export const StockCardTitleStyled = styled.div`
   color: #000000;
 `
 
-export const StockCardButtonStyled = styled.div`
+export const SaleCardButtonStyled = styled.div`
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -37,7 +37,7 @@ export const StockCardButtonStyled = styled.div`
   margin: 100px 20px 0 0;
 `
 
-export const StockImageStyled = styled.img`
+export const SaleImageStyled = styled.img`
   border-radius: 12px 0 0 12px;
   width: 210px;
   height: 160px;

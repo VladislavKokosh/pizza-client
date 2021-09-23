@@ -12,7 +12,6 @@ import {
   GetSaleRequest,
   GetSaleSuccess,
   SaleByIdFailurePayload,
-  SaleByIdPayload,
   SaleByIdSuccessPayload,
   SaleFailurePayload,
   SaleSuccessPayload

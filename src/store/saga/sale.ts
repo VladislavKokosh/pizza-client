@@ -9,7 +9,7 @@ import {
   getSaleByIdAsyncFailure,
   getSaleByIdAsyncSuccess
 } from "../actions/sale";
-import {ISale} from "../types/sale";
+import {GetSaleByIdRequest, ISale} from "../types/sale";
 
 export function* getSale() {
   try {
@@ -24,10 +24,10 @@ export function* getSale() {
   }
 }
 
-export function* getSaleById(id: string) {
+export function* getSaleById(request: GetSaleByIdRequest) {
   try {
     yield put(showLoader())
-    const { data } = yield call(() => axios.get<ISale>(`http://localhost:5050/${id}`))
+    const { data } = yield call(() => axios.get<ISale>(`http://localhost:5050/sale/${request.payload}`))
     yield put(getSaleByIdAsyncSuccess({saleById: data}))
     yield put(hideLoader())
   }

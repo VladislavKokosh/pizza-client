@@ -16,7 +16,6 @@ function* watchBanners() {
 
 function* watchSale() {
   yield takeEvery(GET_SALE, getSale)
-  // @ts-ignore
   yield takeEvery(GET_SALE_BY_ID, getSaleById)
 }
 
