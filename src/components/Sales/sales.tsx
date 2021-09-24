@@ -50,7 +50,6 @@ const Sales = () => {
         {hasEmpty}
       </SaleStyled>
     </>
-
   )
 }
 

@@ -15,7 +15,7 @@ export interface ISale {
 
 export interface SaleState {
   sale: ISale[],
-  saleById: null | ISale,
+  saleById: ISale,
   error: string
 }
 

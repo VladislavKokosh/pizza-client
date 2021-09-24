@@ -10,7 +10,14 @@ import {
 
 const initState: SaleState = {
   sale: [],
-  saleById: null,
+  saleById:
+    {
+      id: '',
+      title: '',
+      image: '',
+      link: '',
+      description: ''
+    },
   error: ''
 }
 
