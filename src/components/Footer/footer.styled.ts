@@ -25,6 +25,9 @@ export const FooterMenuItemsStyled = styled.div`
 export const FooterMenuItemStyled = styled.span`
   padding: 4px;
   cursor: pointer;
+  &:hover{
+    color: #FF3737;
+  }
 `
 
 export const FooterInfoStyled = styled.div`
