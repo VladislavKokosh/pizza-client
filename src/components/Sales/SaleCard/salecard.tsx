@@ -17,7 +17,12 @@ const SaleCard:FC<ISaleCard> = ({id, title, image, description, link}) => {
       <SaleImageStyled src={image} alt='1'/>
       <SaleCardTitleStyled>{title}</SaleCardTitleStyled>
       <SaleCardButtonStyled>
-        <Link style={{color: 'white'}} to={`/stock/${id}`}>Подробнее</Link>
+        <Link
+          style={{color: 'white'}}
+          to={`/stock/${id}`}
+        >
+          Подробнее
+        </Link>
       </SaleCardButtonStyled>
     </SaleCardStyled>
   )

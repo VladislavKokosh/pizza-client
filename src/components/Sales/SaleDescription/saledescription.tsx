@@ -1,5 +1,5 @@
 import React, {FC, useEffect} from "react";
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 
 import {
   SaleDescriptionStyled,
@@ -16,25 +16,22 @@ import {
 } from "./saledescription.styled";
 import {useDispatch, useSelector} from "react-redux";
 import {getSaleByIdAsync} from "../../../store/actions/sale";
-import {getSaleByIdSelector, getSaleSelector} from "../../../store/selectors/sale";
+import {getOtherSaleSelector, getSaleByIdSelector, getSaleSelector} from "../../../store/selectors/sale";
 
 const StockDescription:FC = () => {
   const dispatch = useDispatch()
+  const history = useHistory()
   const { id } = useParams<{id: string}>()
   const saleById = useSelector(getSaleByIdSelector)
-  const sales = useSelector(getSaleSelector)
+  const otherSales = useSelector(getOtherSaleSelector(saleById.id))
 
   useEffect(()=>{
-    // console.log(id)
     dispatch(getSaleByIdAsync(id))
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[])
-  useEffect(()=>{
-    const otherSales = sales.filter((sale) => sale.id !== saleById.id)
-  },[saleById, sales])
+  },[id])
 
-  const hasOtherSales = sales.map(sale => (
-    <SaleOtherCard>
+  const hasOtherSales = otherSales.map(sale => (
+    <SaleOtherCard onClick={() => history.replace(`/stock/${sale.id}`)}>
       <SaleOtherCardImage src={sale.image}/>
       <SaleOtherCardTitle>{sale.title}</SaleOtherCardTitle>
     </SaleOtherCard>
@@ -42,15 +39,21 @@ const StockDescription:FC = () => {
 
   return(
     <SaleDescriptionStyled>
-      <SaleDescriptionImage src={saleById?.image}/>
       <SaleDescriptionAbout>
+        <SaleDescriptionImage src={saleById?.image}/>
         <SaleDescriptionTitle>{saleById?.title}</SaleDescriptionTitle>
         <SaleDescriptionDescription>{saleById?.description}</SaleDescriptionDescription>
-        <SaleDescriptionButton>Сделать предзаказ</SaleDescriptionButton>
+        <SaleDescriptionButton onClick={() => history.replace(`/`)}>Сделать предзаказ</SaleDescriptionButton>
       </SaleDescriptionAbout>
       <SaleOther>
         <SaleOtherTitle>Другие акции</SaleOtherTitle>
         {hasOtherSales}
+        <SaleDescriptionButton
+          onClick={() => history.goBack()}
+          style={{margin: '20px 0 0 0'}}
+        >
+          Все акции
+        </SaleDescriptionButton>
       </SaleOther>
     </SaleDescriptionStyled>
   )

@@ -17,6 +17,8 @@ export const SaleCardTitleStyled = styled.div`
   font-size: 24px;
   line-height: 29px;
   color: #000000;
+  width: 200px;
+  text-align: left;
 `
 
 export const SaleCardButtonStyled = styled.div`
@@ -27,7 +29,7 @@ export const SaleCardButtonStyled = styled.div`
   font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
   color: #FFFFFF;
   width: 180px;
